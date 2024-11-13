@@ -1,0 +1,69 @@
+/* General body styles to center the content and apply basic formatting */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Styling for the timer display container */
+  .timerDisplay {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  /* Styles for the time display element */
+  #timeDisplay {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Generic styles for all buttons */
+  button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Specific styles for the Start button */
+  .Start {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+  
+  .Start:hover {
+    background-color: #45a049;
+  }
+  
+  /* Specific styles for the Stop button */
+  .Stop {
+    background-color: #f44336; /* Red */
+    color: white;
+  }
+  
+  .Stop:hover {
+    background-color: #da3832;
+  }
+  
+  /* Specific styles for the Reset button */
+  .Reset {
+    background-color: #008CBA; /* Blue */
+    color: white;
+  }
+  
+  .Reset:hover {
+    background-color: #007ba7;
+  }
+  
