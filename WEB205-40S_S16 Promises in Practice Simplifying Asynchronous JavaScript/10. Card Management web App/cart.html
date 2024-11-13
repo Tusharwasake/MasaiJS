@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+    /* #userCarts{
+        
+        width: 1000px;
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+    .newCartData{
+        background-color: rgb(220, 204, 236);
+    } */
+
+    /* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f4f4;  /* Slightly different background for cart page */
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #ff6347; /* Different color for cart navigation for distinction */
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Grid Layout for Cart Items */
+#dataCart {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Styling for Individual Cart Data */
+.newCartData {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.newCartData:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+/* Delete Button Styling */
+button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+button:hover {
+    background-color: #c82333;
+}
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Go to index</a>
+    </nav>
+
+    <div id="dataCart">
+
+    </div>
+
+    <script src="/WEB205-40S_S16 Promises in Practice Simplifying Asynchronous JavaScript/10. Card Management web App/cart.js"></script>
+</body>
+</html>

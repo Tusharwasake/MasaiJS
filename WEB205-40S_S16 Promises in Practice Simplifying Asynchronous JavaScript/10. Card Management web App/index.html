@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Application</title>
+    <style>
+        /* #userCarts{
+        
+            width: 1000px;
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+        .cart{
+            background-color: rgb(220, 204, 236);
+        } */
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Grid Layout for User Cards */
+#userCarts {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Styling for Individual Cards */
+.cart {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cart:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+/* Enhanced Button Styling */
+button {
+    background-color: #28a745; /* Green for add, red for delete set below */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    background-color: #218838; /* Darker green for hover on add button */
+}
+
+button:active {
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    transform: translateY(2px); /* Makes the button look like it is being pressed */
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <a href="cart.html">Go to cart</a>
+    </nav>
+
+    <div id="userCarts">
+
+    </div>
+
+
+    <script src="/WEB205-40S_S16 Promises in Practice Simplifying Asynchronous JavaScript/10. Card Management web App/index.js"></script>
+</body>
+</html>
