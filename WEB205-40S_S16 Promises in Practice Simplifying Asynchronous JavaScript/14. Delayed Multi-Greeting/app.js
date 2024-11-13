@@ -4,7 +4,7 @@ async function delayedMultiGreeting(messages) {
     for(const msg of messages){
         await new Promise(resolve => setTimeout(resolve,msg.delay));
         console.log(msg.message);
-        
+         
     }
 }
 
@@ -17,3 +17,6 @@ const messages = [
 delayedMultiGreeting(messages);
 
 // Logs "Hello, world!" after 2 seconds, "How are you?" after 3 seconds, "Goodbye!" after 6 seconds
+
+
+
