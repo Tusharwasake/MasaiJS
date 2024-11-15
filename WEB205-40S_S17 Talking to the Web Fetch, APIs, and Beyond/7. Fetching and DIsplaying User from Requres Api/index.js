@@ -28,7 +28,7 @@ function allUser(people){
             <h1>Name: ${element.firstName}, middle:${element.maidenName}, Last: ${element.lastName}</h1>
             <p>${element.email}</p>
         `
-        users.appendChild(userElement)
+        users.appendChild(userElement);
 
         
     });
