@@ -1,6 +1,6 @@
 let api = "https://jsonplaceholder.typicode.com/users";
 let currentPage =1;
-let usersPerPageLimit = 5
+let usersPerPageLimit = 100
 
 
 document.getElementById("userList").addEventListener("click", function () {
@@ -26,32 +26,6 @@ function fetchUsers(currentPage){
 
 }
 
-async function fetchDisplayData(){
-    const sortCriteria = document.getElementById('sort').value;
-
-
-    try{
-        const response = await fetch("https://jsonplaceholder.typicode.com/users");
-        if (!response.ok) throw new Error("Failed to fetch data");
-        let data = await response.json();
-
-        if(sortCriteria){
-            data.sort((a,b)=>{
-                // if(a[sortCriteria] > b[sortCriteria]) return -1;
-                if(a[sortCriteria] < b[sortCriteria]) return -1;
-                return 0;
-            })
-            console.log(sortCriteria)
-            
-        }
-        displayData(data);
-    } catch(error){
-        console.log(error)
-    }
-
-}
-
-
 
 function displayData(data){
     const userDiv = document.getElementById("container");
@@ -62,10 +36,8 @@ function displayData(data){
         insidediv.classList.add("users")
         insidediv.innerHTML=
         `
-            <h3>${distribute.name}</h3>
-            <p>Email: ${distribute.email}</p>
-            <p>City: ${distribute.address.city}</p>
-            <p>City: ${distribute.id}</p>
+        <h4>${distribute.name}</h4>
+        <p>${distribute.email}</p>
         `
         userDiv.appendChild(insidediv)
 
@@ -76,7 +48,7 @@ function displayData(data){
 function createPagination(){
     const pagination = document.getElementById(`pagination`);
     pagination.innerHTML ="";
-    for(let i =1; i<=3;i++){
+    for(let i =1; i<=5;i++){
         const button = document.createElement("button")
         button.textContent = i;
         button.addEventListener('click',()=>{

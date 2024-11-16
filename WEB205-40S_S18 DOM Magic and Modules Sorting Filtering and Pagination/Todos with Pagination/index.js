@@ -1,6 +1,6 @@
 
-const API_URL = 'https://jsonplaceholder.typicode.com/todos';
-const todosPerPage = 10;
+let API_URL = 'https://jsonplaceholder.typicode.com/todos';
+let todosPerPage = 10;
 let currentPage = 1;
 
 document.getElementById("fetchTodos").addEventListener('click',()=>{
@@ -19,18 +19,18 @@ function fetchTodos(page){
 
 function displayTodos(todos){
     const todolist = document.getElementById('todolist');
-    todoList.innerHTML = '';
+    // todolist.innerHTML = "";
+    todoItem.innerHTML = " ";
     todos.forEach(todo => {
         const todoItem = document.createElement('div');
+        
         todoItem.classList.add('todo-item');
         todoItem.innerHTML = `
           <span>${todo.title}</span>
           <input type="checkbox" ${todo.completed ? 'checked' : ''} disabled>
         `;
         todoList.appendChild(todoItem);
-      });
-
-      
+      });     
 }
 
 function createPagination(){
@@ -46,6 +46,7 @@ function createPagination(){
         pagination.appendChild(button)
     }
 }
+
 
 
 
